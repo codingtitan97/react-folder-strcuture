@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+Input Component Documentation
+Overview
+The Input component is a customizable input component designed for use in React applications. It provides a clean and visually appealing material design-inspired input with support for dynamic labels, error handling, and various input types.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Usage
+To use the Input component, follow these steps:
 
-## Available Scripts
+Import the Component:
 
-In the project directory, you can run:
+jsx
+Copy code
+import Input from './path/to/Input';
+Include the Component in Your JSX:
 
-### `npm start`
+jsx
+Copy code
+<Input
+  label="Username"
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+  onError={(error) => setUsernameError(error)}
+  type="text"
+  isRequired={true}
+/>
+Props
+The Input component accepts the following props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+label (string): The label to be displayed above the input.
+value (string): The current value of the input.
+onChange (function): A callback function to handle input changes.
+onError (function): A callback function to receive error messages.
+type (string): The type of input (e.g., 'text', 'email', 'password', etc.).
+isRequired (boolean): Indicates whether the input is required (default is false).
+...props: Additional HTML input attributes can be passed as props.
+Styling
+The component uses styled-components for styling. The styles are defined in the component file itself, providing a clean and modular structure.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Validation
+The Input component includes basic validation for the 'email' type, checking for required fields and valid email addresses. Custom validation logic can be added or modified in the validateInput function within the component.
 
-### `npm test`
+Error Handling
+Errors are handled within the component, and the onError callback prop allows the parent component to receive and manage error messages. This enables centralized error handling at the application level.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dynamic Label
+The label dynamically adjusts its position and style based on whether the input has a value or an error. The label transitions smoothly to provide a polished user experience.
 
-### `npm run build`
+Conclusion
+The Input component offers a versatile solution for input fields with built-in validation, dynamic labels, and error handling. Its modular structure allows for easy integration into React applications, providing a consistent and user-friendly input experience.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
