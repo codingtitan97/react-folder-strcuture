@@ -1,0 +1,70 @@
+/* Navbar.css */
+
+body {
+    margin: 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffa500; /* Set background color to slight orange */
+    color: #fff;
+  }
+  
+  .left-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .location-search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .location-icon {
+    margin-right: 5px;
+    /* Add your location icon styling here */
+  }
+  
+  .location-search-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-icon {
+    margin-right: 10px;
+    /* Add your cart icon styling here */
+  }
+  
+  .profile-icon {
+    /* Add your profile icon styling here */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .location-search-container {
+      margin-top: 10px;
+    }
+  
+    .right-side {
+      margin-top: 10px;
+    }
+  }
+  
